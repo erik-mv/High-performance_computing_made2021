@@ -1,0 +1,106 @@
+# На Win10 и встроенной в нее Ubuntu20.04 скорость расчетов была одинаковая.
+# На Ubuntu20.04 в докере расчеты шли очевидно медленнее
+# Ниже представлены расчете на ядре Linux под Win10
+# Время расчетов при N равной степени 2 росло... так и не понял, что должно было произойти
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------Расчеты при N=500----------------------------------------------------
+------Без ключей------------------------------С ключем -g------------------------------С ключем -O3-----------
+runtime 0.913231 seconds		runtime 0.898996 seconds		runtime 0.113938 seconds
+runtime 0.914567 seconds		runtime 0.905217 seconds		runtime 0.123710 seconds
+runtime 0.910922 seconds		runtime 0.901253 seconds		runtime 0.119359 seconds
+runtime 0.902156 seconds		runtime 0.903655 seconds		runtime 0.121811 seconds
+runtime 0.907746 seconds		runtime 0.904411 seconds		runtime 0.120809 seconds
+Mat On Mat 0.909724 seconds		Mat On Mat 0.902706 seconds		Mat On Mat 0.119925 seconds
+------------------------------		------------------------------		------------------------------
+runtime 0.001713 seconds		runtime 0.002240 seconds		runtime 0.000664 seconds
+runtime 0.001725 seconds		runtime 0.001853 seconds		runtime 0.000572 seconds
+runtime 0.001590 seconds		runtime 0.001803 seconds		runtime 0.000516 seconds
+runtime 0.001765 seconds		runtime 0.003171 seconds		runtime 0.000540 seconds
+runtime 0.002443 seconds		runtime 0.001996 seconds		runtime 0.000496 seconds
+Mat On Vec 0.001847 seconds		Mat On Vec 0.002213 seconds		Mat On Vec 0.000558 seconds
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------Расчеты при N=512----------------------------------------------------
+------Без ключей------------------------------С ключем -g------------------------------С ключем -O3-----------
+runtime 0.984997 seconds		runtime 0.989526 seconds		runtime 0.130138 seconds
+runtime 0.990640 seconds		runtime 0.986358 seconds		runtime 0.140528 seconds
+runtime 0.996678 seconds		runtime 0.992532 seconds		runtime 0.142708 seconds
+runtime 0.983823 seconds		runtime 0.990764 seconds		runtime 0.138905 seconds
+runtime 0.987638 seconds		runtime 1.005228 seconds		runtime 0.139225 seconds
+Mat On Mat 0.988755 seconds		Mat On Mat 0.992882 seconds		Mat On Mat 0.138301 seconds
+-------------------------------		-------------------------------		-------------------------------
+runtime 0.001810 seconds		runtime 0.002279 seconds		runtime 0.000731 seconds
+runtime 0.001833 seconds		runtime 0.001884 seconds		runtime 0.000509 seconds
+runtime 0.001908 seconds		runtime 0.003809 seconds		runtime 0.000576 seconds
+runtime 0.001820 seconds		runtime 0.001905 seconds		runtime 0.000502 seconds
+runtime 0.001844 seconds		runtime 0.001697 seconds		runtime 0.000612 seconds
+Mat On Vec 0.001843 seconds		Mat On Vec 0.002315 seconds		Mat On Vec 0.000586 seconds
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------Расчеты при N=1000---------------------------------------------------
+------Без ключей------------------------------С ключем -g------------------------------С ключем -O3-----------
+runtime 7.547916 seconds		runtime 7.202448 seconds		runtime 1.199302 seconds
+runtime 7.526410 seconds		runtime 7.221262 seconds		runtime 1.207392 seconds
+runtime 7.501088 seconds		runtime 7.242247 seconds		runtime 1.210651 seconds
+runtime 7.279523 seconds		runtime 7.225095 seconds		runtime 1.211457 seconds
+runtime 7.215780 seconds		runtime 7.224320 seconds		runtime 1.214316 seconds
+Mat On Mat 7.414143 seconds		Mat On Mat 7.223074 seconds		Mat On Mat 1.208624 seconds
+-------------------------------		-------------------------------		-------------------------------
+runtime 0.006191 seconds		runtime 0.006774 seconds		runtime 0.002108 seconds
+runtime 0.007693 seconds		runtime 0.006160 seconds		runtime 0.002039 seconds
+runtime 0.008249 seconds		runtime 0.007003 seconds		runtime 0.002043 seconds
+runtime 0.006872 seconds		runtime 0.007276 seconds		runtime 0.004733 seconds
+runtime 0.007509 seconds		runtime 0.006828 seconds		runtime 0.002282 seconds
+Mat On Vec 0.007303 seconds		Mat On Vec 0.006808 seconds		Mat On Vec 0.002641 seconds
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------Расчеты при N=1024---------------------------------------------------
+------Без ключей------------------------------С ключем -g------------------------------С ключем -O3-----------
+runtime 8.028490 seconds		runtime 7.711048 seconds		runtime 1.268781 seconds
+runtime 7.998997 seconds		runtime 7.672956 seconds		runtime 1.274153 seconds
+runtime 8.008139 seconds		runtime 7.692210 seconds		runtime 1.272810 seconds
+runtime 7.753461 seconds		runtime 7.656984 seconds		runtime 1.272296 seconds
+runtime 7.740854 seconds		runtime 7.640096 seconds		runtime 1.280747 seconds
+Mat On Mat 7.905988 seconds		Mat On Mat 7.674659 seconds		Mat On Mat 1.273757 seconds
+-------------------------------		-------------------------------		-------------------------------
+runtime 0.006572 seconds		runtime 0.006545 seconds		runtime 0.002309 seconds
+runtime 0.006603 seconds		runtime 0.006910 seconds		runtime 0.002113 seconds
+runtime 0.008609 seconds		runtime 0.007996 seconds		runtime 0.002266 seconds
+runtime 0.007198 seconds		runtime 0.007227 seconds		runtime 0.002106 seconds
+runtime 0.007260 seconds		runtime 0.008819 seconds		runtime 0.002167 seconds
+Mat On Vec 0.007248 seconds		Mat On Vec 0.007499 seconds		Mat On Vec 0.002192 seconds
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------Расчеты при N=2000---------------------------------------------------
+------Без ключей------------------------------С ключем -g------------------------------С ключем -O3-----------
+runtime 57.367688 seconds		runtime 58.188215 seconds		runtime 9.699428 seconds
+runtime 57.508140 seconds		runtime 57.228018 seconds		runtime 9.686411 seconds
+runtime 57.350407 seconds		runtime 57.278259 seconds		runtime 9.674099 seconds
+runtime 57.334941 seconds		runtime 57.337562 seconds		runtime 9.707838 seconds
+runtime 58.424043 seconds		runtime 57.199592 seconds		runtime 9.691682 seconds
+Mat On Mat 57.597044 seconds		Mat On Mat 57.446329 seconds		Mat On Mat 9.691892 seconds
+-------------------------------		-------------------------------		-------------------------------
+runtime 0.029776 seconds		runtime 0.027418 seconds		runtime 0.008619 seconds
+runtime 0.027651 seconds		runtime 0.028245 seconds		runtime 0.009129 seconds
+runtime 0.027363 seconds		runtime 0.028897 seconds		runtime 0.010386 seconds
+runtime 0.029736 seconds		runtime 0.029951 seconds		runtime 0.008835 seconds
+runtime 0.028852 seconds		runtime 0.028238 seconds		runtime 0.009702 seconds
+Mat On Vec 0.028676 seconds		Mat On Vec 0.028550 seconds		Mat On Vec 0.009334 seconds
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------Расчеты при N=2048---------------------------------------------------
+------Без ключей------------------------------С ключем -g------------------------------С ключем -O3-----------
+runtime 62.822846 seconds		runtime 61.138897 seconds		runtime 10.351586 seconds
+runtime 61.968920 seconds		runtime 64.318939 seconds		runtime 10.229887 seconds
+runtime 62.141376 seconds		runtime 61.914962 seconds		runtime 10.247919 seconds
+runtime 62.028099 seconds		runtime 60.874955 seconds		runtime 10.241662 seconds
+runtime 62.756362 seconds		runtime 60.916162 seconds		runtime 10.453416 seconds
+Mat On Mat 62.343521 seconds		Mat On Mat 61.832783 seconds		Mat On Mat 10.304894 seconds
+-------------------------------		-------------------------------		-------------------------------
+runtime 0.033052 seconds		runtime 0.029984 seconds		runtime 0.008220 seconds
+runtime 0.029379 seconds		runtime 0.028028 seconds		runtime 0.009760 seconds
+runtime 0.030091 seconds		runtime 0.026769 seconds		runtime 0.008958 seconds
+runtime 0.029044 seconds		runtime 0.030238 seconds		runtime 0.009792 seconds
+runtime 0.028543 seconds		runtime 0.030199 seconds		runtime 0.010544 seconds
+Mat On Vec 0.030022 seconds		Mat On Vec 0.029044 seconds		Mat On Vec 0.009455 seconds
