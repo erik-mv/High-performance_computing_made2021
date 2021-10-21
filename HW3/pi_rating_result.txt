@@ -1,0 +1,4 @@
+pi = 3.14158654
+runtime: 94.117s
+number of threads: 4
+number of points: 10000000000
