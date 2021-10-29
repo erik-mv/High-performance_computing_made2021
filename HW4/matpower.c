@@ -8,7 +8,6 @@
 const size_t N = 4;
 const size_t M = 7;
 
-
 void print_matrix(int* A, size_t n)
 {
     for (size_t i = 0; i < n; ++i)

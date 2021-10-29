@@ -4,6 +4,7 @@
 #include <time.h>
 
 //g++ -std=c++11 HW4/pagerank.c -o HW4/pagerank -lblas
+
 const size_t N = 15;
 const double EPS = 1e-8;
 const double DUMP_FACTOR = 0.9;
