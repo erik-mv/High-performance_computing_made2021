@@ -1,1 +1,7 @@
 https://disk.yandex.ru/d/y2uk6fHW7CWD1A
+
+
+module load mpich-3.3.2_gcc-4.8.5
+
+mpicc -std=c11 hw5_1.c
+mpirun -n 8 ./a.out
